@@ -8,7 +8,7 @@ bot = telebot.TeleBot("5468434717:AAEAiUSNhioP9v7Xvu8mUp_OP2Fn1tpa58M")
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
     bot.reply_to(message, "Доброго ранку, ми з України! Я поки вмію просто відповідати тим, що ти пишеш")
-spisok = ['ого-го', 'ну таке...', 'ти так вважаєш?', 'маєш рацію', 'мабуть в цьому є сенс', 'можливо і так', 'я хз', 'що тобі відповісти?']
+spisok = ['що?', 'я мабуть піду', 'ого-го', 'ну таке...', 'ти так вважаєш?', 'маєш рацію', 'мабуть в цьому є сенс', 'можливо і так', 'я хз', 'що тобі відповісти?']
 random_mes = random.choice(spisok)
 
 @bot.message_handler(func=lambda m: True)
