@@ -9,3 +9,12 @@ def kick_scooter(name, weight):
 name = input('Input Your Name: ')
 weight = int(input('Input Your Weight in Kg: '))
 kick_scooter(name, weight)
+
+def drink_me(param):
+    msq = ' В..ПИ:Ваем ' + param + ' сакан '
+    print(msq)
+    param = 'пусой '
+
+qlass = 'попный '
+drink_me(qlass)
+print( ' Сакан ' , qlass )
