@@ -1,5 +1,5 @@
 import random
-
+import datetime
 import telebot
 # 5468434717:AAEAiUSNhioP9v7Xvu8mUp_OP2Fn1tpa58M
 
@@ -30,9 +30,10 @@ def echo_all(message):
     elif message.text == 'хз' or message.text == 'не знаю' or message.text == 'иди':
         bot.reply_to(message, 'Ну ти вже доросла людина, а не знаєш що тобі треба!')
     else:
+        today = datetime.datetime.now()
         spisok = ['ого-го', 'ну таке...', 'ти так вважаєш?', 'маєш рацію', 'мабуть в цьому є сенс', 'можливо і так',
                   'я хз', 'що тобі відповісти?', 'ти щось не те кажеш', 'так!!!', 'о ноу!', 'ти знову за старе?!', 'мені треба подумати', 'ти ще тут? міцний горішок )))', 'з тобою кумедно', 'ой дурне...', 'іди похрумкай барбарисок']
-        random_mes = random.choice(spisok)
+        random_mes = (random.choice(spisok) + f'\n{today: %d-%m-%Y  %H:%M}')
         bot.reply_to(message, random_mes)
 
 
